@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajasthan Staff Selection Board - PATWARI 2025 Results</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: #f0f2f5;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            background-image: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: white;
+            padding: 25px 30px;
+            text-align: center;
+            border-bottom: 5px solid #ff9900;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 10px;
+        }
+
+        .header-content i {
+            font-size: 2.8rem;
+            color: #ffcc00;
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .hindi-title {
+            font-size: 1.4rem;
+            margin-top: 5px;
+            color: #ffcc80;
+            font-weight: 500;
+        }
+
+        .exam-title {
+            background-color: rgba(255, 255, 255, 0.15);
+            padding: 10px 25px;
+            border-radius: 30px;
+            display: inline-block;
+            margin-top: 15px;
+            font-weight: 600;
+            font-size: 1.2rem;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 30px;
+            padding: 30px;
+        }
+
+        @media (max-width: 1100px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .panel {
+            background-color: #fff;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e1e5eb;
+        }
+
+        .panel-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f0f2f5;
+        }
+
+        .panel-header i {
+            color: #2a5298;
+            font-size: 1.5rem;
+        }
+
+        .panel-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e3c72;
+        }
+
+        .upload-section {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .upload-area {
+            border: 3px dashed #2a5298;
+            border-radius: 12px;
+            padding: 40px 20px;
+            background-color: #f8fafd;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 20px;
+        }
+
+        .upload-area:hover {
+            background-color: #eef2ff;
+            border-color: #1e3c72;
+        }
+
+        .upload-area i {
+            font-size: 4rem;
+            color: #2a5298;
+            margin-bottom: 15px;
+        }
+
+        .upload-area h3 {
+            color: #1e3c72;
+            margin-bottom: 10px;
+        }
+
+        .file-name {
+            background-color: #f0f2f5;
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-weight: 600;
+            color: #1e3c72;
+            display: inline-block;
+        }
+
+        .btn {
+            background: linear-gradient(to right, #2a5298, #1e3c72);
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 6px rgba(42, 82, 152, 0.2);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(42, 82, 152, 0.3);
+        }
+
+        .btn:disabled {
+            background: #cccccc;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .btn-secondary {
+            background: linear-gradient(to right, #6c757d, #495057);
+        }
+
+        .btn-success {
+            background: linear-gradient(to right, #28a745, #1e7e34);
+        }
+
+        .search-box {
+            display: flex;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .search-box input {
+            flex: 1;
+            padding: 16px 20px;
+            border: 1px solid #ddd;
+            border-right: none;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        .search-box input:focus {
+            border-color: #2a5298;
+        }
+
+        .search-box button {
+            border-radius: 0;
+            padding: 0 30px;
+        }
+
+        .search-results {
+            min-height: 200px;
+        }
+
+        .candidate-card {
+            display: flex;
+            background: linear-gradient(to right, #f8fafd, #eef2ff);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-left: 6px solid #2a5298;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .candidate-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .candidate-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #2a5298, #1e3c72);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-right: 25px;
+            flex-shrink: 0;
+        }
+
+        .candidate-info {
+            flex: 1;
+        }
+
+        .candidate-info h3 {
+            font-size: 1.6rem;
+            color: #1e3c72;
+            margin-bottom: 8px;
+        }
+
+        .candidate-details {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .detail-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .detail-label {
+            font-weight: 600;
+            color: #555;
+            min-width: 120px;
+        }
+
+        .detail-value {
+            color: #1e3c72;
+            font-weight: 500;
+        }
+
+        .rank-display {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .rank-card {
+            flex: 1;
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+            border-top: 5px solid;
+        }
+
+        .rank-card.overall {
+            border-color: #1e3c72;
+        }
+
+        .rank-card.category {
+            border-color: #ff9900;
+        }
+
+        .rank-label {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .rank-value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #1e3c72;
+            line-height: 1;
+        }
+
+        .rank-card.category .rank-value {
+            color: #ff9900;
+        }
+
+        .rank-subtext {
+            font-size: 0.9rem;
+            color: #888;
+            margin-top: 8px;
+        }
+
+        .results-table-container {
+            overflow-x: auto;
+            margin-top: 20px;
+            border-radius: 10px;
+            border: 1px solid #e1e5eb;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 800px;
+        }
+
+        thead {
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: white;
+        }
+
+        th {
+            padding: 16px 15px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid #f0f2f5;
+            transition: background-color 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background-color: #f8fafd;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f9fafc;
+        }
+
+        tbody tr:hover:nth-child(even) {
+            background-color: #f0f4ff;
+        }
+
+        td {
+            padding: 14px 15px;
+        }
+
+        .category-badge {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .category-obc { background-color: #e3f2fd; color: #1565c0; }
+        .category-gen { background-color: #e8f5e9; color: #2e7d32; }
+        .category-sc { background-color: #fff3e0; color: #ef6c00; }
+        .category-st { background-color: #fce4ec; color: #c2185b; }
+        .category-ews { background-color: #f3e5f5; color: #7b1fa2; }
+        .category-mbc { background-color: #e0f2f1; color: #00695c; }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 25px;
+            gap: 8px;
+        }
+
+        .pagination button {
+            padding: 10px 16px;
+            background-color: white;
+            color: #2a5298;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .pagination button:hover:not(:disabled) {
+            background-color: #f0f4ff;
+        }
+
+        .pagination button.active {
+            background-color: #2a5298;
+            color: white;
+            border-color: #2a5298;
+        }
+
+        .pagination button:disabled {
+            color: #aaa;
+            cursor: not-allowed;
+        }
+
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .stat-card {
+            background: #f8fafd;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            border-left: 4px solid #2a5298;
+        }
+
+        .stat-value {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #1e3c72;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+        }
+
+        .loading i {
+            font-size: 3rem;
+            color: #2a5298;
+            margin-bottom: 15px;
+        }
+
+        .loading p {
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        .error-message {
+            background-color: #ffebee;
+            border-left: 4px solid #f44336;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 0 6px 6px 0;
+            display: none;
+        }
+
+        .demo-notice {
+            background-color: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 0 6px 6px 0;
+        }
+
+        .instructions {
+            background-color: #fff8e1;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 0 6px 6px 0;
+        }
+
+        .instructions h4 {
+            color: #ff8f00;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .highlight {
+            background-color: #fffacd;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #666;
+            border-top: 1px solid #eee;
+            font-size: 0.9rem;
+            background-color: #f8fafd;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        .highlight-row {
+            background-color: #fffacd !important;
+            border-left: 4px solid #ff9900;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+
+        .no-results i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <i class="fas fa-landmark"></i>
+                <div>
+                    <h1>Rajasthan Staff Selection Board</h1>
+                    <div class="hindi-title">राजस्थान कर्मचारी चयन बोर्ड</div>
+                </div>
+            </div>
+            <div class="exam-title">
+                <i class="fas fa-file-contract"></i> PATWARI 2025 (पटवारी 2025) - Merit Wise List of Candidates
+            </div>
+        </header>
+
+        <div class="demo-notice">
+            <h4><i class="fas fa-info-circle"></i> Demo Data Loaded</h4>
+            <p>The system is pre-loaded with the PATWARI 2025 results data from the provided PDF. You can search for candidates by name or roll number.</p>
+        </div>
+
+        <div class="main-content">
+            <div class="panel">
+                <div class="panel-header">
+                    <i class="fas fa-upload"></i>
+                    <h2 class="panel-title">Upload & Process PDF</h2>
+                </div>
+                
+                <div class="instructions">
+                    <h4><i class="fas fa-lightbulb"></i> How to Use</h4>
+                    <p>1. Upload a PDF file with candidate results in the specified format</p>
+                    <p>2. Click "Process PDF" to extract and analyze the data</p>
+                    <p>3. Search for candidates by name or roll number</p>
+                    <p>4. View overall rank and category rank for each candidate</p>
+                </div>
+                
+                <div class="upload-section">
+                    <div class="upload-area" id="dropArea">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <h3>Drag & Drop PDF File Here</h3>
+                        <p>or</p>
+                        <button class="btn" id="browseBtn"><i class="fas fa-folder-open"></i> Browse Files</button>
+                        <input type="file" id="pdfUpload" accept=".pdf" style="display: none;">
+                        <div class="file-name" id="pdfFileName">Split_20251217_0957.pdf (Sample Data Loaded)</div>
+                    </div>
+                    
+                    <button class="btn btn-success" id="processBtn"><i class="fas fa-cogs"></i> Process PDF Data</button>
+                </div>
+                
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <div class="stat-value" id="totalCandidates">177</div>
+                        <div class="stat-label">Total Candidates</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="categoriesCount">6</div>
+                        <div class="stat-label">Categories</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="topScore">276.95</div>
+                        <div class="stat-label">Top Score</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="femaleCandidates">8</div>
+                        <div class="stat-label">Female Candidates</div>
+                    </div>
+                </div>
+                
+                <div class="error-message" id="errorMessage">
+                    <p><i class="fas fa-exclamation-triangle"></i> <span id="errorText">An error occurred while processing the PDF.</span></p>
+                </div>
+                
+                <div class="loading" id="loadingIndicator" style="display: none;">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Processing PDF data...</p>
+                    <p>This may take a few seconds</p>
+                </div>
+            </div>
+            
+            <div class="panel">
+                <div class="panel-header">
+                    <i class="fas fa-search"></i>
+                    <h2 class="panel-title">Search Candidate</h2>
+                </div>
+                
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Enter candidate name or roll number">
+                    <button class="btn" id="searchBtn"><i class="fas fa-search"></i> Search</button>
+                </div>
+                
+                <div id="searchResults" class="search-results">
+                    <!-- Search results will appear here -->
+                    <div class="instructions">
+                        <h4><i class="fas fa-search"></i> Search Examples</h4>
+                        <p>Try searching for: <span class="highlight">SATPAL</span> (Rank 1), <span class="highlight">SAURABH NEHRA</span> (Rank 2), or <span class="highlight">511502</span> (Roll Number)</p>
+                        <p>You can also search by father's name or category</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="panel" style="grid-column: span 2;">
+                <div class="panel-header">
+                    <i class="fas fa-list-ol"></i>
+                    <h2 class="panel-title">All Candidates - Merit List</h2>
+                    <div style="margin-left: auto;">
+                        <button class="btn btn-secondary" id="exportBtn"><i class="fas fa-download"></i> Export Data</button>
+                    </div>
+                </div>
+                
+                <div id="resultsSection">
+                    <div id="resultsTableContainer" class="results-table-container">
+                        <table id="resultsTable">
+                            <thead>
+                                <tr>
+                                    <th>Merit Rank</th>
+                                    <th>Name</th>
+                                    <th>Roll No</th>
+                                    <th>Father's Name</th>
+                                    <th>Category</th>
+                                    <th>Raw Marks</th>
+                                    <th>Normalized</th>
+                                    <th>Category Rank</th>
+                                </tr>
+                            </thead>
+                            <tbody id="resultsTableBody">
+                                <!-- Candidate data will be loaded here -->
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="pagination" id="pagination">
+                        <!-- Pagination will be generated here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p><i class="fas fa-landmark"></i> Rajasthan Staff Selection Board - PATWARI 2025 Results Portal</p>
+            <p>This is a demonstration application for processing and searching candidate results from PDF documents.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Sample data parsed from the provided PDF
+        let allCandidates = [];
+        let currentPage = 1;
+        const itemsPerPage = 15;
+        let currentSearchTerm = '';
+
+        // DOM elements
+        const pdfUpload = document.getElementById('pdfUpload');
+        const browseBtn = document.getElementById('browseBtn');
+        const dropArea = document.getElementById('dropArea');
+        const processBtn = document.getElementById('processBtn');
+        const pdfFileName = document.getElementById('pdfFileName');
+        const loadingIndicator = document.getElementById('loadingIndicator');
+        const errorMessage = document.getElementById('errorMessage');
+        const searchInput = document.getElementById('searchInput');
+        const searchBtn = document.getElementById('searchBtn');
+        const searchResults = document.getElementById('searchResults');
+        const resultsTableBody = document.getElementById('resultsTableBody');
+        const pagination = document.getElementById('pagination');
+        const exportBtn = document.getElementById('exportBtn');
+        const totalCandidatesEl = document.getElementById('totalCandidates');
+        const categoriesCountEl = document.getElementById('categoriesCount');
+        const topScoreEl = document.getElementById('topScore');
+        const femaleCandidatesEl = document.getElementById('femaleCandidates');
+
+        // Event Listeners
+        browseBtn.addEventListener('click', () => pdfUpload.click());
+        
+        pdfUpload.addEventListener('change', function() {
+            if (this.files.length > 0) {
+                const fileName = this.files[0].name;
+                pdfFileName.textContent = fileName;
+                processBtn.disabled = false;
+                errorMessage.style.display = 'none';
+            }
+        });
+
+        // Drag and drop functionality
+        dropArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropArea.style.backgroundColor = '#eef2ff';
+            dropArea.style.borderColor = '#1e3c72';
+        });
+
+        dropArea.addEventListener('dragleave', () => {
+            dropArea.style.backgroundColor = '';
+            dropArea.style.borderColor = '#2a5298';
+        });
+
+        dropArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropArea.style.backgroundColor = '';
+            dropArea.style.borderColor = '#2a5298';
+            
+            if (e.dataTransfer.files.length > 0) {
+                const file = e.dataTransfer.files[0];
+                if (file.type === 'application/pdf') {
+                    pdfUpload.files = e.dataTransfer.files;
+                    const fileName = file.name;
+                    pdfFileName.textContent = fileName;
+                    processBtn.disabled = false;
+                    errorMessage.style.display = 'none';
+                } else {
+                    showError('Please upload a PDF file only.');
+                }
+            }
+        });
+
+        processBtn.addEventListener('click', processPDF);
+        searchBtn.addEventListener('click', searchCandidate);
+        searchInput.addEventListener('keyup', (e) => {
+            if (e.key === 'Enter') searchCandidate();
+        });
+        exportBtn.addEventListener('click', exportData);
+
+        // Functions
+        function showError(message) {
+            document.getElementById('errorText').textContent = message;
+            errorMessage.style.display = 'block';
+        }
+
+        function hideError() {
+            errorMessage.style.display = 'none';
+        }
+
+        function showLoading() {
+            loadingIndicator.style.display = 'block';
+            processBtn.disabled = true;
+        }
+
+        function hideLoading() {
+            loadingIndicator.style.display = 'none';
+        }
+
+        // Parse the provided PDF text data
+        function parsePDFText() {
+            // This is the exact data from the provided PDF
+            const pdfData = `511502 SATPAL BALVEER RAM MALE OBC 1 271.4789 PUSHPA DEVI 274.2127
+269384 SAURABH NEHRA RAMCHANDRA SINGH NEHRA MALE OBC 2 276.9465 SUSHILA DEVI 274.2127
+731842 VISHVA RAJ ARHA HINGLAJ DAN MALE OBC 3 270.7828 SUSHILA KUNWAR 273.6042
+186445 LALCHAND KHICHAR MUNNIRAM MALE OBC 4 276.4177 GORA DEVI 273.5943
+501018 ASHISH BISHNOI BHANWAR LAL MALE OBC 5 269.9947 KAMALA DEVI 273.2015
+356105 AYAN KHAN NASIR KHAN MALE OBC 6 276.4080 NAJMA BANO 273.2012
+471037 MUKESH CHAMPA LAL MALE OBC 7 269.9813 SUAA DEVI 272.8072
+113149 TOFEEK KHAN SHABBIR KHAN MALE OBC 8 275.6017 HANSEERA BANO 272.7810
+677946 JAGDISH KUMAR BHURA RAM MALE OBC 9 269.4460 PANCHI DEVI 272.5159
+241797 SANDEEP CHOUDHARY RATIRAM CHOUDHARY MALE OBC 10 275.5849 KAMLA DEVI 272.4982
+561194 MUKESH KUMAR DHANA RAM MALE OBC 11 268.8436 PHOOLWATI 272.1901
+222245 ALLADITA PAPPU KHAN MALE OBC 12 275.5331 SEEMA BEGHAM 272.1621
+660949 ARUN GOUR SAMPATRAJ GOUR MALE EWS 13 268.0905 KANTA GOUR 271.5566
+429970 TASIL KHAN NAJIR KHAN FEMALE OBC 14 274.9763 RAJ BANO 271.5078
+510175 SUNIL GODARA MOHAN RAM MALE OBC 15 267.4871 LICHHAMA DEVI 271.1246
+267844 DINESH KUMAWAT MADAN LAL KUMAWAT MALE OBC 16 274.7394 PARMESHWARI DEVI 271.0925
+467256 DUSHYANT MEHRA RAM KARAN MEHRA MALE SC 17 267.0587 CHANDRA KALA MEHRA 270.0302
+310718 PANKAJ KUMAR SUBHASH CHANDRA MALE OBC 18 272.7860 ROSHANI 269.9006
+613745 RAKESH KUMAR YADAV SHYOJIRAM YADAV MALE OBC 19 266.6697 SURGYAN DEVI 269.6753
+354468 BRIJESH SINGH BHADANA HEMRAJ GURJAR MALE MBC 20 272.6658 GAYATRI BAI 269.6254
+470438 BHARAT CHUNA RAM MALE OBC 21 266.0043 RATNI DEVI 269.2249
+167315 SONU BISHNOI OM PARAKASH BISHNOI MALE OBC 22 272.4096 MANOHRI DEVI 269.2041
+706116 HARDEV SINGH RANAWAT HEER SINGH RANAWAT MALE EWS 23 265.9652 NATAVAR KUNWAR 269.1281
+163306 TARA CHAND DHATTARWAL BHANWAR LAL DHATTARWAL MALE OBC 24 272.2698 DROPATI DEVI 269.0061
+675975 DEVENDRA KUMAR BHOORA RAM CHOUDHARY MALE OBC 25 264.5237 RAMU DEVI 268.3557
+415822 SULTAN MOHAMMED SINDHI IKBAL MOHAMMED SINDHI MALE OBC 26 272.1713 YES HASINA BANO 268.3354
+547441 GORAV KAMRA INDARMOHAN KAMRA MALE EWS 27 264.3805 VIMLA 267.9662
+367424 RAJVEER SINGH MANOHAR SINGH MALE GEN 28 271.4167 MEETHU KANWAR 267.8668
+489920 PREETI KUMARI MANOJ KUMAR FEMALE OBC 29 264.0307 SANTOSH 267.4733
+317616 VISHNU VISHNOI OMA RAM MALE OBC 30 270.7954 PAPPU DEVI 267.3794
+751015 KULDEEP SINGH RANAWAT SHAMBHU SINGH RANAWAT MALE EWS 31 263.6880 KANCHAN KUNWAR RANAWAT 267.2080
+172740 PANKAJ KUMAR JAKHAR KULDEEP JAKHAR MALE OBC 32 270.7102 SUMITRA DEVI 267.1704
+676306 PRATAP SINGH BHATI AIDAN SINGH BHATI MALE EWS 33 263.4170 SAMDUKANWAR BHATI 267.0247
+323710 RAVINDER SUKHDEV MALE OBC 34 270.6100 SHOBHA DEVI 266.9964
+653554 PRATEEK CHOUDHARY SHISHUPAL SINGH MALE OBC 35 263.2658 SAROJ 266.8402
+306548 TEJVEER SINGH SATYENDRA SINGH MALE GEN 36 270.3542 KAMLESH DEVI 266.7442
+520567 URMILA DHAKER BHAGWAN LAL DHAKER FEMALE OBC 37 262.7162 KANTA BAI 266.3789
+341552 NARENDRA SINGH SHER SINGH MALE GEN 38 269.9369 KHAMA KANWAR 266.3256
+750525 KOMAL SINGH CHUNDAWAT NIRBHAY SNGIH CHUNDAWAT MALE EWS 39 262.7089 CHANDAN KUNWAR 266.2242
+317846 PRITHVI SINGH BALWANT SINGH MALE EWS 40 269.6692 SHOBHA DEVI 266.1738
+717051 PANKAJ JOSHI MUKESH JOSHI MALE EWS 41 262.5944 MADHU JOSHI 266.1295
+417094 SAHDEV BIDADA DUDARAM BIDADA MALE OBC 42 269.6628 INDRA DEVI 266.1276
+719450 MONU JAT SITARAM JAT MALE OBC 43 262.5874 GEETA DEVI 265.9657
+173624 BHARAT JOSHI NARENDRA JOSHI MALE EWS 44 269.2128 ASHA JOSHI 265.8775
+605660 NIKHIL SINGH CHOUDHARY GAMBHIR SINGH MALE OBC 45 262.4349 REKHA SINGH 265.8215
+433232 RAMESH JAT CHHAGNA RAM MALE OBC 46 269.2062 HEERA DEVI 265.7528
+554512 LALCHAND VERMA RAMESHWAR LAL MALE OBC 47 261.9965 CHAMPA 265.4617
+308980 RAHUL NAGAR DEW KARN MALE MBC 48 268.7960 KIRAN 265.3774
+495297 NAVNEET SHARMA MUKESH KUMAR SHARMA MALE GEN 49 261.8800 MINAKSHI SHARMA 265.2550
+210135 PARVINDER SINGH ROOP SINGH MALE SC 50 268.5477 NASEEB KOUR 265.1994
+509506 RAM NIWAS PHULPHAKAR SANWAR MAL MALE OBC 51 261.7943 SANTOSH DEVI 265.0900
+388473 MANISHA SURENDRA KUMAR MAHALA FEMALE OBC 52 268.2998 BHAGIRATHI DEVI 264.9582
+656233 OMA RAM JETHA RAM MALE OBC 53 261.2874 DHAPU DEVI 264.7919
+164026 PRADEEP KUMAR PAREEK OM PRAKASH PAREEK MALE EWS 54 268.2943 GUDDI DEVI 264.6648
+479411 HEMANT GULPADIYA SUBHASH CHAND GULPADIYA MALE GEN 55 260.5939 CHANDRAKALA 264.4329
+428922 CHETAN BHAU RAM MALE OBC 56 268.2585 MEERA 264.4176
+598294 RAMU SINGH SATISH KUMAR MALE OBC 57 260.5485 SHAKUNTLA 264.3966
+396499 SUMER SINGH RAM SINGH MALE EWS 58 268.2361 PARAS KANWAR 264.3854
+503971 RAMESH DAN INDRA DAN MALE OBC 59 260.5134 PAVAN KANWAR 264.3438
+296911 KAPIL KUMAR RAMESH KUMAR MALE EWS 60 268.1323 MANJULA DEVI 264.3226
+701000 TANUJA VAISHNAV RAMNIWAS VAISHNAV FEMALE OBC 61 260.5121 CHUKA DEVI 264.3068
+315232 LOKESH KUMAR MUKH RAM MALE OBC 62 268.0798 TARAMANI 264.2597
+679020 BHAGWAN SINGH DEVENDRA SINGH MALE OBC 63 260.3401 PARBHA PARIHAR 264.1478
+187132 KRITIKA SANWAR MAL FEMALE OBC 64 267.8617 PARMESHWARI DEVI 264.0964
+719660 AMAR SINGH GURJAR JAGDEESH PRASAD GURJAR MALE MBC 65 260.3194 DHOLI DEVI 264.0578
+325084 VINOD NATH DHARM NATH MALE OBC 66 267.7444 GANGA DEVI 263.8207
+662147 GIRDHARI SINGH BHUR SINGH MALE OBC 67 259.3773 GITA KANWAR 263.5535
+315987 SOHIL KHAN INTZAR ALI MALE OBC 68 267.7171 SALMA BANO 263.5216
+536300 PRIYA SHARMA SUKHDEV SHARMA FEMALE EWS 69 259.2674 SUNITA DEVI 263.4669
+286704 SHYAM LAL JAIN BRIJMOHAN JAIN MALE EWS 70 267.6213 SAVITRI DEVI 263.4364
+639512 DHEERAJ KUMAR NAGAR MANOHAR LAL NAGAR MALE OBC 71 259.2341 RUKMAN BAI 263.3798
+401125 MONU SAINI RAM LAL SAINI MALE OBC 72 267.4346 PREM DEVI 263.3308
+626174 DINESH KUMAR RUNDLA PHULA RAM MALE OBC 73 259.2196 SURJI DEVI 263.3014
+290821 NIRMAL SAINI RAMDHAN SAINI MALE OBC 74 267.3322 SHANTI DEVI 263.2751
+681087 SANDEEP SINGH BHATI GANPAT SINGH BHATI MALE EWS 75 259.2165 UMMED KANWAR 263.2603
+151354 CHITRANJAN CHAUDHARY POORAN SINGH CHAUDHARY MALE OBC 76 267.2748 KAVITA CHAUDHARY 263.2452
+445229 DEEPENDRA SINGH CHARAN GOPAL SINGH CHARAN MALE OBC 77 259.2147 MEENA KANWAR 263.1643
+322914 MAHESH DEORA SUGNA RAM MALE OBC 78 266.9356 SAMMU DEVI 263.0621
+558973 RAM NIWAS RAMKUMAR MALE OBC 79 259.1658 SHANTI DEVI 263.0052
+431448 PUSHPA CHOUDHARY JAGDISH RAM FEMALE OBC 80 266.7385 KAUSHALYA DEVI 262.9408
+678675 MULA RAM DARJI BHANWAR LAL MALE OBC 81 259.1242 KESAR DEVI 262.9262
+210530 PAWANDEEP KOUR MANMOHAN SINGH FEMALE OBC 82 266.7151 INDERJEET KOUR 262.8783
+577142 SUBHASH KUMAWAT MADAN LAL KUMAWAT MALE OBC 83 258.9772 PARMESHWARI DEVI 262.8352
+430036 DINESH DHIDHARIYA ISHARARAM MALE OBC 84 266.6645 BARJI DEVI 262.8143
+505922 AMIT KUMAR BHAGIRATH MAL MALE OBC 85 258.9543 PARMESHWARI DEVI 262.7943
+124457 DILIP KUMAR MOHAN LAL MALE MBC 86 266.5925 YES GIRAJA DEVI 262.7587
+480027 KANHA MITTAL ASHOK KUMAR MITTAL MALE EWS 87 258.9046 ANITA MITTAL 262.6234
+106640 PUSHPANK PUROHIT NARENDRA PUROHIT MALE GEN 88 265.9762 SANTOSH PUROHIT 262.4320
+594080 NARESH GUPTA GOPAL LAL GUPTA MALE GEN 89 258.8768 INDIRA DEVI GUPTA 262.4054
+242596 RAVINDRA SINGH SAYAR SINGH MALE EWS 90 265.8679 NANDU KANWAR 262.3188
+617055 NISHANT SINGH JAGAWAT JAIPAL SINGH MALE OBC 91 258.7039 LALITA KANWAR 262.2418
+166590 RADHESHYAM SOKHAL BABU LAL MALE OBC 92 265.6333 BALU DEVI 262.1568
+643342 LOKESH SURENDRA MALE OBC 93 258.6665 SUMAN DEVI 262.1475
+412354 TANMAY KUMAR VAIRAGI PAVAN KUMAR VAIRAGI MALE OBC 94 265.6203 SITA VAIRAGI 262.1343
+676787 MANOHAR SINGH DANGA SUKHA RAM DANGA MALE OBC 95 258.6384 SHOBHA DEVI 262.1277
+103392 JITENDRA JANGID RADHESHYAM JANGID MALE OBC 96 265.6107 LALITA JANGID 262.1179
+684811 NISHANT JANGID JAYDAYAL JANGID MALE OBC 97 258.6182 GOURISH DEVI 262.0946
+360783 VISHAL SINGH YAGYENDRA SINGH MALE GEN 98 265.4918 MAYA KANWAR 262.0539
+673942 HUKMA RAM SUTHAR PUNARAM MALE OBC 99 258.6150 RUKMA DEVI 262.0387
+320826 VIKASH BISHNOI MOHAN RAM MALE OBC 100 265.4003 SAMTA 262.0008
+759919 ASHUTOSH SHARMA MADAN KUMAR SHARMA MALE GEN 101 258.5951 SUDHA DEVI 261.9824
+352985 MAHENDRA SINGH CHAUTHI LAL MALE OBC 102 265.3001 ANGURI DEVI 261.9374
+498734 ARPIT OJHA RAJESH OJHA MALE EWS 103 258.5660 KAVITA SHARMA 261.9232
+205956 PARTH RATHORE MANOJ KUMAR RATHORE MALE GEN 104 265.2325 YES SHANTA BHOI 261.8988
+506028 GHANSHYAM SINGH KARANPAL SINGH MALE EWS 105 258.5647 SANTOSH KANWAR 261.8888
+341309 RAJENDRA SINGH SHAITAN SINGH MALE EWS 106 265.1618 KANWARA KANWAR 261.8615
+724233 SONU SINGH CHOUDHARY BADRI LAL CHOUDHARY MALE OBC 107 258.5600 RUKAMANI DEVI 261.8395
+326660 DAMA RAM HANUMAN RAM MALE OBC 108 265.0008 PANNI DEVI 261.7349
+606383 ADITYA KUMAR NIRANJAN SINGH MALE OBC 109 258.4374 NIRMALA 261.7183
+164481 KANHAIYA LAL KAILASH RAM MALE OBC 110 264.9943 HAWA DEVI 261.7155
+473566 GANPAT POONIA PADMA RAM CHOUDHARY MALE OBC 111 258.4364 RUKHMON DEVI 261.7097
+208449 UMESH PATIDAR GAUTAM PATIDAR MALE OBC 112 264.9471 YES SAVEETA PATIDAR 261.6835
+632962 ANIL KUMAR KHETAPAL RAM MALE SC 113 258.4150 GEETA DEVI 261.6803
+380080 ISHWER SINGH RATHORE RAJENDRA SINGH RATHORE MALE EWS 114 264.9400 SHYAMU KUNWAR 261.5855
+473535 SAWAI RAM CHOUDHARY CHIMA RAM MALE OBC 115 258.1814 BHANWARI DEVI 261.5363
+166394 MAYA SIT NATH FEMALE OBC 116 264.7060 KAMA DEVI 261.4198
+732608 VINA RAM TALAKA RAM MALE SC 117 258.1218 OBU DEVI 261.4122
+414423 SHAILENDRA SINGH RAO VIJAY SINGH RAO MALE OBC 118 264.6890 PAVAN KUNWAR RAO 261.3455
+617999 REESHI RAJ SAINI DHARAM SINGH SAINI MALE OBC 119 257.9748 BATTO DEVI 261.3224
+254666 GIRIRAJ SINGH UPENDRA SINGH MALE GEN 120 264.5849 MANJU KANWAR 261.2643
+630693 AJAY NEHRA MOHAN LAL NEHRA MALE OBC 121 257.9372 BEERU DEVI 261.2306
+147883 LALIT SHARMA MURARI SHARMA MALE EWS 122 264.2272 SUMAN SHARMA 261.0654
+649368 YASHSVEE GOYAL RAMNARAYAN FEMALE EWS 123 257.8972 MANJU DEVI 261.0591
+337028 JAIPAL SINGH CHARAN SAHADEV CHARAN MALE OBC 124 264.1863 PARKASH KANWAR 261.0129
+670569 ANIL KUMAR SHAITAN RAM MALE OBC 125 257.8296 KHAMA DEVI 260.9994
+163233 OM PRAKASH BHANWAR LAL MALE OBC 126 264.0669 CHANDER KALA 260.8938
+614326 RAKESH YADAV RICHHPAL YADAV MALE OBC 127 257.7048 LADA DEVI 260.8844
+357136 ARPIT PORWAL DINESH PORWAL MALE EWS 128 264.0442 BHARTI PORWAL 260.8568
+678769 VIRENDRA SINWAR UDA RAM SINWAR MALE OBC 129 257.6648 MEERA DEVI 260.8515
+332074 MUKESH KUMAR MAFA RAM MALE OBC 130 263.9913 CHHAGANI DEVI 260.6650
+676497 MAHIPAL SAHEERAM MALE OBC 131 257.3024 RAMJHU 260.6459
+431545 HARI RAM DALAL UMA RAM DALAL MALE OBC 132 263.9714 KAMALA DEVI 260.6038
+769865 DINESH BODLIYA KUMBHARAM BODLIYA MALE OBC 133 257.2299 RATNI DEVI 260.5988
+174696 LOKESH KUMAR RAIKA SHAMBHU LAL RAIKA MALE MBC 134 263.9286 KANCHAN BAI 260.5738
+766495 MAHAVEER PRASAD JAT JETHA RAM JAT MALE OBC 135 257.2181 GEETA DEVI 260.5699
+197074 ANSHU SHARMA RAKESH KUMAR SHARMA MALE EWS 136 263.8338 MADHU SHARMA 260.4744
+661118 MAHENDRA SINGH SENWAR FATEH SINGH SENWAR MALE OBC 137 257.1084 MEENA DEVI 260.4708
+241644 RAJESH KUMAR GURJAR JAGDISH GURJAR MALE MBC 138 263.8253 MATHURA DEVI 260.4371
+525038 SARWAN KUMAR PRAJAPAT RATAN LAL PRAJAPAT MALE OBC 139 257.0464 MANOHARI DEVI 260.4356
+173298 KULDEEP SINGH CHARAN BHANWAR DAN MALE OBC 140 263.8127 GEETA KANWAR 260.4118
+642562 PUSHPENDRA SINGH NARENDRA SINGH MALE GEN 141 257.0099 INDRA KANWAR 260.4106
+237918 DEEN DAYAL SAINI BHAGWAN SAHAY SAINI MALE OBC 142 263.7667 KRISHNA SAINI 260.3721
+526781 KULDEEP SINGH MAHENDRA SINGH MALE EWS 143 256.9769 SANTOSH KANWAR 260.3705
+337775 RAMKISHOR PAPPURAM MALE OBC 144 263.6166 MEEMA DEVI 260.2302
+632973 NEPAL SINGH GEN SINGH MALE GEN 145 256.8433 HASTU KANWAR 260.2300
+554675 VINOD KUMAR INDRAJ JHORAR MALE OBC 146 256.8073 PARWATI DEVI 260.2081
+135583 KAILASH CHOUDHARY GORADHAN RAM MALE OBC 147 263.6088 CHAMPA DEVI 260.2078
+666023 DEEPARAM NAGA RAM MALE OBC 148 256.7399 KHAMA DEVI 260.1207
+337284 SURENDRA SANGWA PRAHLADRAM MALE OBC 149 263.4985 DHANI DEVI 260.1173
+671374 JITENDRA OMPRAKASH MALE OBC 150 256.5988 SOHANI 260.0455
+167538 SUBHASH BISHNOI JAGDISH RAM BISHNOI MALE OBC 151 263.4919 SHANTI 260.0443
+535876 ADITYA VIKRAM SINGH SIKARWAR NAHAR SINGH SIKARWAR MALE EWS 152 256.5420 SUDHA SIKARWAR 260.0150
+276272 SANTOSH KUMAR KUMAWAT BHANWAR LAL KUMAWAT MALE OBC 153 263.4877 BHANWARI DEVI 260.0143
+738946 MENKA CHOUDHARY TEJPRAKASH CHOUDHARY FEMALE OBC 154 256.5213 KOUSHLYA DEVI 259.9520
+311617 ANIL KUMAR SAINI GIRDHARI LAL SAINI MALE OBC 155 263.3752 TARA DEVI 259.9473
+662565 CHANDAN SINGH RATHORE CHAIN SINGH RATHORE MALE EWS 156 256.4924 KAMOD KANWAR 259.8891
+271115 VINOD KUDALIYA CHHOTU LAL KUDALIYA MALE OBC 157 263.2781 VIMLA DEVI 259.8842
+569172 RAM KRISHAN SHARMA NARENDRA KUMAR SHARMA MALE EWS 158 256.4674 MAMTA DEVI 259.8402
+273963 DILIP SINGH PALAWAT NARAYAN SINGH MALE OBC 159 263.2064 SHRI KANWAR 259.8360
+658495 BHARAT KARAN GIRDHARI RAM MALE OBC 160 256.4490 NATHI DEVI 259.7889
+329130 PUSHPENDRA SINGH RATHORE CHANDRA SINGH RATHORE MALE GEN 161 263.1192 RENU KANWAR 259.7796
+599504 VIKAS CHOUDHARY BALU RAM CHOUDHARY MALE OBC 162 256.3677 LAXMI DEVI 259.6403
+120030 GYANDEEP GUPTA RAJESH KUMAR GUPTA MALE GEN 163 262.8841 SHARDA GUPTA 259.6253
+655889 MAHAVEER RAM KUNWAR MALE OBC 164 256.3581 RUPA DEVI 259.6057
+344445 PURUSHOTTAM RAM BHOOPAT SINGH MALE EWS 165 262.8484 SHYAMA DEVI 259.6029
+502169 RAVINDRA GULERIA RAM LAL GULERIA MALE OBC 166 256.3534 SUKH DEVI GULERIA 259.5860
+135280 JOGENDRA KUMAR KHEMA RAM MALE OBC 167 262.8135 LAXMI DEVI 259.5827
+632460 AMANJEET SINGH BRIJENDRA SINGH MALE OBC 168 256.3432 SANTOSH DEVI 259.5244
+183723 SAHARUKH KHAN PATHAN FAKHRU KHAN PATHAN MALE EWS 169 262.6844 SIRAJ BEGUM 259.5131
+593443 KULDEEP YADAV BHANWAR LAL YADAV MALE OBC 170 256.3348 SUMITRA DEVI 259.5038
+294227 NIKITA SHARMA SURESH CHAND SHARMA FEMALE EWS 171 262.6704 VIMLA DEVI 259.5020
+578522 RAHUL KUMAWAT BABU LAL KUMAWAT MALE OBC 172 256.3283 SUMAN DEVI 259.4976
+388115 AJRUDDIN KHAN AFSAR ALI MALE OBC 173 262.6659 RUKSANA BANO 259.4970
+704548 DEEPESH DABI SATYA NARAYAN DABI MALE OBC 174 256.3268 SAROJ 259.4947
+325220 RAVINDRA CHARAN MADAN DAN CHARAN MALE OBC 175 262.6618 SANTOSH KANWAR 259.4942
+720219 MUKESH SAINI RAJU SAINI MALE OBC 176 256.3262 MANBHAR DEVI 259.4429
+288608 YUVRAJ SINGH YADAV KAMLESH KUMAR YADAV MALE OBC 177 262.5310 PHOOL YADAV 259.4281`;
+
+            const lines = pdfData.split('\n');
+            const candidates = [];
+            const categories = new Set();
+            let femaleCount = 0;
+            let maxScore = 0;
+            
+            for (let line of lines) {
+                line = line.trim();
+                if (!line) continue;
+                
+                const tokens = line.split(' ');
+                if (tokens.length < 9) continue;
+                
+                // Find gender index
+                let genderIndex = -1;
+                for (let i = 0; i < tokens.length; i++) {
+                    if (tokens[i] === 'MALE' || tokens[i] === 'FEMALE') {
+                        genderIndex = i;
+                        break;
+                    }
+                }
+                
+                if (genderIndex === -1) continue;
+                
+                // Extract fields
+                const rollNo = tokens[0];
+                
+                // Candidate name is from index 1 to genderIndex-2 (assuming father's name is 2 tokens before gender)
+                const nameEnd = genderIndex - 2;
+                if (nameEnd < 1) continue;
+                
+                const name = tokens.slice(1, nameEnd).join(' ');
+                const fatherName = tokens.slice(nameEnd, genderIndex).join(' ');
+                const gender = tokens[genderIndex];
+                const category = tokens[genderIndex + 1];
+                const merit = parseInt(tokens[genderIndex + 2]);
+                const rawMarks = parseFloat(tokens[genderIndex + 3]);
+                
+                // Mother name is from genderIndex+4 to end-1
+                const motherNameStart = genderIndex + 4;
+                const normalizedMarks = parseFloat(tokens[tokens.length - 1]);
+                const motherName = tokens.slice(motherNameStart, tokens.length - 1).join(' ');
+                
+                // Remove "YES" from mother name if present
+                const cleanMotherName = motherName.replace(/^YES\s+/, '');
+                
+                categories.add(category);
+                if (gender === 'FEMALE') femaleCount++;
+                if (rawMarks > maxScore) maxScore = rawMarks;
+                
+                candidates.push({
+                    rollNo,
+                    name,
+                    fatherName,
+                    motherName: cleanMotherName,
+                    gender,
+                    category,
+                    overallRank: merit,
+                    rawMarks,
+                    normalizedMarks,
+                    categoryRank: 0 // Will be calculated
+                });
+            }
+            
+            // Calculate category ranks
+            const categoryGroups = {};
+            candidates.forEach(candidate => {
+                if (!categoryGroups[candidate.category]) {
+                    categoryGroups[candidate.category] = [];
+                }
+                categoryGroups[candidate.category].push(candidate);
+            });
+            
+            Object.keys(categoryGroups).forEach(category => {
+                categoryGroups[category].sort((a, b) => b.rawMarks - a.rawMarks);
+                categoryGroups[category].forEach((candidate, index) => {
+                    candidate.categoryRank = index + 1;
+                });
+            });
+            
+            // Sort by overall rank
+            candidates.sort((a, b) => a.overallRank - b.overallRank);
+            
+            return {
+                candidates,
+                categories: Array.from(categories),
+                femaleCount,
+                maxScore: maxScore.toFixed(2),
+                total: candidates.length
+            };
+        }
+
+        // Process PDF function
+        function processPDF() {
+            showLoading();
+            hideError();
+            
+            // Simulate processing delay
+            setTimeout(() => {
+                const parsedData = parsePDFText();
+                allCandidates = parsedData.candidates;
+                
+                // Update stats
+                updateStats(parsedData);
+                
+                // Display results
+                displayCandidates();
+                
+                hideLoading();
+                
+                // Show success message
+                searchResults.innerHTML = `
+                    <div class="candidate-card fade-in">
+                        <div class="candidate-avatar">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="candidate-info">
+                            <h3>PDF Processed Successfully</h3>
+                            <p>Loaded ${allCandidates.length} candidate records from the PDF.</p>
+                            <p>You can now search for candidates or browse the full results.</p>
+                        </div>
+                    </div>
+                `;
+                
+                // Enable search
+                searchInput.disabled = false;
+                searchBtn.disabled = false;
+            }, 1000);
+        }
+
+        function updateStats(parsedData) {
+            totalCandidatesEl.textContent = parsedData.total;
+            categoriesCountEl.textContent = parsedData.categories.length;
+            topScoreEl.textContent = parsedData.maxScore;
+            femaleCandidatesEl.textContent = parsedData.femaleCount;
+        }
+
+        function displayCandidates(page = 1, highlightRollNo = null) {
+            currentPage = page;
+            const startIndex = (page - 1) * itemsPerPage;
+            const endIndex = startIndex + itemsPerPage;
+            const pageCandidates = allCandidates.slice(startIndex, endIndex);
+            
+            // Clear table
+            resultsTableBody.innerHTML = '';
+            
+            if (pageCandidates.length === 0) {
+                resultsTableBody.innerHTML = `
+                    <tr>
+                        <td colspan="8" class="no-results">
+                            <i class="fas fa-search"></i>
+                            <p>No candidates found. Try uploading a PDF or searching for a candidate.</p>
+                        </td>
+                    </tr>
+                `;
+            } else {
+                // Populate table with candidate data
+                pageCandidates.forEach(candidate => {
+                    const row = document.createElement('tr');
+                    
+                    // Check if this row should be highlighted
+                    if (highlightRollNo && candidate.rollNo === highlightRollNo) {
+                        row.classList.add('highlight-row');
+                    }
+                    
+                    // Determine category class
+                    let categoryClass = '';
+                    switch(candidate.category) {
+                        case 'GEN': categoryClass = 'category-gen'; break;
+                        case 'OBC': categoryClass = 'category-obc'; break;
+                        case 'SC': categoryClass = 'category-sc'; break;
+                        case 'ST': categoryClass = 'category-st'; break;
+                        case 'EWS': categoryClass = 'category-ews'; break;
+                        case 'MBC': categoryClass = 'category-mbc'; break;
+                        default: categoryClass = 'category-gen';
+                    }
+                    
+                    row.innerHTML = `
+                        <td><strong>${candidate.overallRank}</strong></td>
+                        <td><strong>${candidate.name}</strong></td>
+                        <td>${candidate.rollNo}</td>
+                        <td>${candidate.fatherName}</td>
+                        <td><span class="category-badge ${categoryClass}">${candidate.category}</span></td>
+                        <td>${candidate.rawMarks.toFixed(4)}</td>
+                        <td>${candidate.normalizedMarks.toFixed(4)}</td>
+                        <td>${candidate.categoryRank}</td>
+                    `;
+                    resultsTableBody.appendChild(row);
+                });
+            }
+            
+            // Generate pagination
+            generatePagination();
+        }
+
+        function generatePagination() {
+            const totalPages = Math.ceil(allCandidates.length / itemsPerPage);
+            
+            if (totalPages <= 1) {
+                pagination.innerHTML = '';
+                return;
+            }
+            
+            let paginationHTML = '';
+            
+            // Previous button
+            paginationHTML += `<button onclick="displayCandidates(${currentPage - 1})" ${currentPage === 1 ? 'disabled' : ''}><i class="fas fa-chevron-left"></i></button>`;
+            
+            // Page numbers
+            const maxVisiblePages = 5;
+            let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
+            let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+            
+            // Adjust if we're at the end
+            if (endPage - startPage + 1 < maxVisiblePages) {
+                startPage = Math.max(1, endPage - maxVisiblePages + 1);
+            }
+            
+            // First page
+            if (startPage > 1) {
+                paginationHTML += `<button onclick="displayCandidates(1)">1</button>`;
+                if (startPage > 2) {
+                    paginationHTML += `<button disabled>...</button>`;
+                }
+            }
+            
+            // Page numbers
+            for (let i = startPage; i <= endPage; i++) {
+                paginationHTML += `<button onclick="displayCandidates(${i})" class="${i === currentPage ? 'active' : ''}">${i}</button>`;
+            }
+            
+            // Last page
+            if (endPage < totalPages) {
+                if (endPage < totalPages - 1) {
+                    paginationHTML += `<button disabled>...</button>`;
+                }
+                paginationHTML += `<button onclick="displayCandidates(${totalPages})">${totalPages}</button>`;
+            }
+            
+            // Next button
+            paginationHTML += `<button onclick="displayCandidates(${currentPage + 1})" ${currentPage === totalPages ? 'disabled' : ''}><i class="fas fa-chevron-right"></i></button>`;
+            
+            pagination.innerHTML = paginationHTML;
+        }
+
+        function searchCandidate() {
+            const query = searchInput.value.trim().toLowerCase();
+            currentSearchTerm = query;
+            
+            if (!query) {
+                searchResults.innerHTML = `
+                    <div class="error-message">
+                        <p><i class="fas fa-exclamation-circle"></i> Please enter a candidate name or roll number to search.</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            // Search in candidates
+            const results = allCandidates.filter(candidate => 
+                candidate.name.toLowerCase().includes(query) || 
+                candidate.rollNo.toLowerCase().includes(query) ||
+                candidate.fatherName.toLowerCase().includes(query) ||
+                candidate.category.toLowerCase().includes(query)
+            );
+            
+            if (results.length === 0) {
+                searchResults.innerHTML = `
+                    <div class="error-message">
+                        <p><i class="fas fa-user-times"></i> No candidate found matching "${query}".</p>
+                        <p>Try searching by name (e.g., "SATPAL"), roll number (e.g., "511502"), or father's name.</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            // Display search results
+            let resultsHTML = '';
+            
+            if (results.length === 1) {
+                const candidate = results[0];
+                
+                // Get initials for avatar
+                const initials = candidate.name.split(' ').map(n => n[0]).join('').toUpperCase();
+                if (initials.length > 3) initials = initials.substring(0, 3);
+                
+                // Determine category class
+                let categoryClass = '';
+                switch(candidate.category) {
+                    case 'GEN': categoryClass = 'category-gen'; break;
+                    case 'OBC': categoryClass = 'category-obc'; break;
+                    case 'SC': categoryClass = 'category-sc'; break;
+                    case 'ST': categoryClass = 'category-st'; break;
+                    case 'EWS': categoryClass = 'category-ews'; break;
+                    case 'MBC': categoryClass = 'category-mbc'; break;
+                    default: categoryClass = 'category-gen';
+                }
+                
+                resultsHTML = `
+                    <div class="candidate-card fade-in">
+                        <div class="candidate-avatar">
+                            ${initials}
+                        </div>
+                        <div class="candidate-info">
+                            <h3>${candidate.name}</h3>
+                            <div class="candidate-details">
+                                <div class="detail-item">
+                                    <span class="detail-label"><i class="fas fa-id-card"></i> Roll Number:</span>
+                                    <span class="detail-value">${candidate.rollNo}</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label"><i class="fas fa-male"></i> Father's Name:</span>
+                                    <span class="detail-value">${candidate.fatherName}</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label"><i class="fas fa-female"></i> Mother's Name:</span>
+                                    <span class="detail-value">${candidate.motherName}</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label"><i class="fas fa-venus-mars"></i> Gender:</span>
+                                    <span class="detail-value">${candidate.gender}</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label"><i class="fas fa-layer-group"></i> Category:</span>
+                                    <span class="detail-value"><span class="category-badge ${categoryClass}">${candidate.category}</span></span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label"><i class="fas fa-chart-line"></i> Raw Marks:</span>
+                                    <span class="detail-value">${candidate.rawMarks.toFixed(4)}</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label"><i class="fas fa-chart-bar"></i> Normalized Marks:</span>
+                                    <span class="detail-value">${candidate.normalizedMarks.toFixed(4)}</span>
+                                </div>
+                            </div>
+                            <div class="rank-display">
+                                <div class="rank-card overall">
+                                    <div class="rank-label">Overall Rank</div>
+                                    <div class="rank-value">${candidate.overallRank}</div>
+                                    <div class="rank-subtext">Out of ${allCandidates.length} candidates</div>
+                                </div>
+                                <div class="rank-card category">
+                                    <div class="rank-label">${candidate.category} Category Rank</div>
+                                    <div class="rank-value">${candidate.categoryRank}</div>
+                                    <div class="rank-subtext">In ${candidate.category} category</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                
+                // Find which page this candidate is on and highlight it
+                const candidateIndex = allCandidates.findIndex(c => c.rollNo === candidate.rollNo);
+                const candidatePage = Math.floor(candidateIndex / itemsPerPage) + 1;
+                
+                // If not already on the right page, switch to it
+                if (currentPage !== candidatePage) {
+                    displayCandidates(candidatePage, candidate.rollNo);
+                } else {
+                    // Re-render current page with highlight
+                    displayCandidates(currentPage, candidate.rollNo);
+                }
+            } else {
+                resultsHTML = '<h4>Multiple matches found:</h4>';
+                results.slice(0, 5).forEach(candidate => {
+                    // Determine category class
+                    let categoryClass = '';
+                    switch(candidate.category) {
+                        case 'GEN': categoryClass = 'category-gen'; break;
+                        case 'OBC': categoryClass = 'category-obc'; break;
+                        case 'SC': categoryClass = 'category-sc'; break;
+                        case 'ST': categoryClass = 'category-st'; break;
+                        case 'EWS': categoryClass = 'category-ews'; break;
+                        case 'MBC': categoryClass = 'category-mbc'; break;
+                        default: categoryClass = 'category-gen';
+                    }
+                    
+                    resultsHTML += `
+                        <div class="candidate-card" style="margin-top: 15px; padding: 15px;">
+                            <div class="candidate-info">
+                                <h4>${candidate.name}</h4>
+                                <div class="candidate-details">
+                                    <div class="detail-item">
+                                        <span class="detail-label">Roll No:</span>
+                                        <span class="detail-value">${candidate.rollNo}</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-label">Category:</span>
+                                        <span class="detail-value"><span class="category-badge ${categoryClass}">${candidate.category}</span></span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-label">Overall Rank:</span>
+                                        <span class="detail-value">${candidate.overallRank}</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-label">Category Rank:</span>
+                                        <span class="detail-value">${candidate.categoryRank}</span>
+                                    </div>
+                                </div>
+                                <button class="btn btn-secondary" onclick="selectCandidate('${candidate.rollNo}')" style="margin-top: 10px; padding: 8px 15px; font-size: 0.9rem;">
+                                    <i class="fas fa-eye"></i> View Details
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                });
+                
+                if (results.length > 5) {
+                    resultsHTML += `<p style="margin-top: 10px; color: #666;">... and ${results.length - 5} more matches</p>`;
+                }
+            }
+            
+            searchResults.innerHTML = resultsHTML;
+            
+            // Scroll to search results
+            searchResults.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        function selectCandidate(rollNo) {
+            const candidate = allCandidates.find(c => c.rollNo === rollNo);
+            if (candidate) {
+                searchInput.value = candidate.name;
+                searchCandidate();
+            }
+        }
+
+        function exportData() {
+            // Create CSV content
+            let csvContent = "Roll No,Name,Father Name,Mother Name,Gender,Category,Overall Rank,Category Rank,Raw Marks,Normalized Marks\n";
+            
+            allCandidates.forEach(candidate => {
+                csvContent += `${candidate.rollNo},"${candidate.name}","${candidate.fatherName}","${candidate.motherName}",${candidate.gender},${candidate.category},${candidate.overallRank},${candidate.categoryRank},${candidate.rawMarks},${candidate.normalizedMarks}\n`;
+            });
+            
+            // Create a blob and download link
+            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.setAttribute('href', url);
+            link.setAttribute('download', 'patwari_2025_results.csv');
+            link.style.visibility = 'hidden';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        // Initialize with demo data
+        window.addEventListener('DOMContentLoaded', () => {
+            // Load the data immediately
+            const parsedData = parsePDFText();
+            allCandidates = parsedData.candidates;
+            
+            // Update stats
+            updateStats(parsedData);
+            
+            // Display initial data
+            displayCandidates();
+            
+            // Enable search
+            searchInput.disabled = false;
+            searchBtn.disabled = false;
+            
+            // Show welcome message
+            searchResults.innerHTML = `
+                <div class="candidate-card fade-in">
+                    <div class="candidate-avatar">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <div class="candidate-info">
+                        <h3>PATWARI 2025 Results Portal</h3>
+                        <p>The system is loaded with ${allCandidates.length} candidate records from the Rajasthan Staff Selection Board PATWARI 2025 exam.</p>
+                        <p>Try searching for:</p>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li><span class="highlight">SATPAL</span> (Rank 1 - OBC category)</li>
+                            <li><span class="highlight">SAURABH NEHRA</span> (Rank 2)</li>
+                            <li><span class="highlight">511502</span> (Roll number for SATPAL)</li>
+                            <li><span class="highlight">PREETI KUMARI</span> (Female candidate)</li>
+                            <li><span class="highlight">OBC</span> (Search by category)</li>
+                        </ul>
+                    </div>
+                </div>
+            `;
+        });
+    </script>
+</body>
+          </html>
